@@ -1,0 +1,7 @@
+# Telegram Bot
+TELEGRAM_BOT_TOKEN=8270065702:AAGPoMDkSO9n83zZrKt8Z9Tfk5E9fOx73y8
+# Database
+DATABASE_URL=postgresql://pediatric_user:intb958@localhost/pediatric_crm
+
+# App
+DEBUG=False
