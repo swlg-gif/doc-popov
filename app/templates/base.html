@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Кабинет доктора Попова{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-top">
+                <div class="logo">
+                    <h1>🏥 Кабинет доктора Попова</h1>
+                </div>
+                <div class="user-info">
+                    <span>Доктор Попов</span>
+                    <span>•</span>
+                    <span id="currentTime"></span>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <a href="/" class="nav-item {% if request.url.path == '/' %}active{% endif %}">👥 Пациенты</a>
+                <a href="/appointments" class="nav-item {% if request.url.path == '/appointments' %}active{% endif %}">📅 Записи</a>
+                <a href="/reports" class="nav-item {% if request.url.path == '/reports' %}active{% endif %}">📊 Отчеты</a>
+                <a href="/settings" class="nav-item {% if request.url.path == '/settings' %}active{% endif %}">⚙️ Настройки</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

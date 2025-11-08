@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Ошибка - Кабинет доктора Попова{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2 class="page-title">Ошибка</h2>
+</div>
+
+<div class="error-container">
+    <div class="error-icon">⚠️</div>
+    <h3>Произошла ошибка</h3>
+    <p>{{ error }}</p>
+    <a href="/" class="btn btn-primary">Вернуться на главную</a>
+</div>
+
+<style>
+.error-container {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+.error-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+</style>
+{% endblock %}
