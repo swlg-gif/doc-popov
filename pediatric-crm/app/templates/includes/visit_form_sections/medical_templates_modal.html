@@ -1,0 +1,95 @@
+<!-- Medical Templates Modal -->
+<div class="modal fade" id="templatesModal" tabindex="-1" aria-labelledby="templatesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="templatesModalLabel">
+                    <i class="fas fa-cog"></i> Управление медицинскими шаблонами
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <button type="button" class="btn btn-primary btn-sm" onclick="createNewTemplate()">
+                        <i class="fas fa-plus"></i> Создать новый шаблон
+                    </button>
+                </div>
+
+                <div id="templatesList">
+                    <!-- Список шаблонов будет загружен здесь -->
+                </div>
+
+                <!-- Форма создания/редактирования шаблона -->
+                <div id="templateForm" style="display: none;" class="mt-4 p-3 border rounded">
+                    <h6 id="templateFormTitle">Создание нового шаблона</h6>
+                    
+                    <div class="mb-3">
+                        <label for="templateName" class="form-label">Название шаблона:</label>
+                        <input type="text" class="form-control" id="templateName">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="templateDiagnosis" class="form-label">Диагноз (МКБ-10):</label>
+                        <input type="text" class="form-control" id="templateDiagnosis" placeholder="J06.9 - ОРВИ">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Назначения:</label>
+                        <div id="templatePrescriptionsList">
+                            <!-- Список назначений для шаблона -->
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-primary mt-2" onclick="addTemplatePrescription()">
+                            <i class="fas fa-plus"></i> Добавить назначение
+                        </button>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-success btn-sm" onclick="saveTemplate()">
+                            <i class="fas fa-save"></i> Сохранить шаблон
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-sm" onclick="cancelTemplateEdit()">
+                            <i class="fas fa-times"></i> Отмена
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Шаблон для элемента назначения в форме шаблона -->
+<template id="templatePrescriptionFormItem">
+    <div class="template-prescription-form-item mb-2">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Назначение">
+            <button class="btn btn-outline-danger" type="button" onclick="removeTemplatePrescription(this)">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+</template>
+
+<!-- Шаблон для элемента в списке шаблонов -->
+<template id="templateListItem">
+    <div class="template-list-item card mb-2">
+        <div class="card-body py-2">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6 class="mb-1 template-name"></h6>
+                    <small class="text-muted template-diagnosis"></small>
+                </div>
+                <div class="btn-group btn-group-sm">
+                    <button type="button" class="btn btn-outline-primary" onclick="editTemplate(this)" data-template-id="">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-danger" onclick="deleteTemplate(this)" data-template-id="">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
