@@ -1,0 +1,74 @@
+nohup: ignoring input
+INFO:     Started server process [10777]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:55216 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     193.124.113.84:0 - "HEAD / HTTP/1.0" 405 Method Not Allowed
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /appointments HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /reports HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /settings HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /reports HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /settings HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /appointments HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /reports HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /settings HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /appointments HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /reports HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /settings HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /reports HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /appointments HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     162.158.95.26:0 - "GET /wp-admin/setup-config.php HTTP/1.0" 404 Not Found
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     172.69.150.193:0 - "GET /wordpress/wp-admin/setup-config.php HTTP/1.0" 404 Not Found
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /appointments HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /reports HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /settings HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET /settings HTTP/1.0" 200 OK
+INFO:     81.23.121.146:0 - "GET / HTTP/1.0" 200 OK
+INFO:     91.84.86.2:0 - "GET / HTTP/1.0" 200 OK
+INFO:     91.84.86.2:0 - "GET /js/lkk_ch.js HTTP/1.0" 404 Not Found
+INFO:     91.84.86.2:0 - "GET /js/twint_ch.js HTTP/1.0" 404 Not Found
+INFO:     91.84.86.2:0 - "GET /css/support_parent.css HTTP/1.0" 404 Not Found
+INFO:     91.84.86.2:0 - "GET / HTTP/1.0" 200 OK
+INFO:     91.84.86.2:0 - "GET /js/lkk_ch.js HTTP/1.0" 404 Not Found
+INFO:     91.84.86.2:0 - "GET /css/support_parent.css HTTP/1.0" 404 Not Found
+INFO:     91.84.86.2:0 - "GET /js/twint_ch.js HTTP/1.0" 404 Not Found
+INFO:     104.164.158.86:0 - "GET / HTTP/1.0" 200 OK
+INFO:     103.115.186.164:0 - "GET / HTTP/1.0" 200 OK
+INFO:     142.111.103.252:0 - "GET / HTTP/1.0" 200 OK
+INFO:     142.111.103.252:0 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     195.164.49.144:0 - "GET / HTTP/1.0" 200 OK
+INFO:     95.24.150.128:0 - "GET / HTTP/1.0" 200 OK
+INFO:     95.24.150.128:0 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     95.24.150.128:0 - "GET / HTTP/1.0" 200 OK
+INFO:     95.24.150.128:0 - "GET / HTTP/1.0" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10777]

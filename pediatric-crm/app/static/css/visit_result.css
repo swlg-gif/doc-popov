@@ -1,0 +1,165 @@
+/* Visit Result Form Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 48px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.sidebar .nav-link.active {
+    color: #007bff;
+}
+
+.main-content {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        margin-left: 25%;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-content {
+        margin-left: 16.666667%;
+    }
+}
+
+/* Form Elements */
+.form-section {
+    margin-bottom: 2rem;
+}
+
+.template-prescription-item {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #e9ecef;
+    border-radius: 0.25rem;
+}
+
+.additional-diagnosis-item, .manual-prescription-item, .template-prescription-form-item {
+    margin-bottom: 0.5rem;
+}
+
+/* Custom Checkboxes */
+.form-check-input:checked {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+/* Cards */
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+/* Modal */
+.modal-header {
+    background-color: #f8f9fa;
+}
+
+/* Buttons */
+.btn-group-sm > .btn, .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.2rem;
+}
+
+/* Template List */
+.template-list-item {
+    transition: all 0.3s ease;
+}
+
+.template-list-item:hover {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Prescription Items */
+.prescription-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border: 1px solid #e9ecef;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.prescription-item .form-check {
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+/* Diagnosis Tags */
+.diagnosis-tag {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Status Indicators */
+.status-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Payment Summary */
+.payment-summary {
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+
+/* Responsive Tables */
+.table-responsive {
+    font-size: 0.875rem;
+}
+
+/* Custom Alerts */
+.alert-custom {
+    border-left: 4px solid;
+}
+
+/* Print Styles */
+@media print {
+    .sidebar, .btn-toolbar, .modal, .no-print {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+    
+    .card {
+        border: 1px solid #000 !important;
+        break-inside: avoid;
+    }
+}

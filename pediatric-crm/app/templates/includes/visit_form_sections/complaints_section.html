@@ -1,0 +1,39 @@
+<!-- Complaints Section -->
+<div class="card mb-4">
+    <div class="card-header">
+        <h5 class="mb-0">
+            <i class="fas fa-comment-medical"></i>
+            Жалобы и анамнез
+        </h5>
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label for="complaints" class="form-label">Жалобы пациента и анамнез:</label>
+            <textarea class="form-control" id="complaints" name="complaints" rows="4" 
+                      placeholder="Опишите жалобы пациента, историю заболевания..."></textarea>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="form-label">Длительность заболевания:</label>
+                <select class="form-select" id="diseaseDuration">
+                    <option value="">-- Выберите --</option>
+                    <option value="1-2 дня">1-2 дня</option>
+                    <option value="3-5 дней">3-5 дней</option>
+                    <option value="1 неделя">1 неделя</option>
+                    <option value="2 недели">2 недели</option>
+                    <option value="1 месяц">1 месяц</option>
+                    <option value="более месяца">более месяца</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Острота начала:</label>
+                <select class="form-select" id="onsetAcuteness">
+                    <option value="">-- Выберите --</option>
+                    <option value="острое">Острое</option>
+                    <option value="постепенное">Постепенное</option>
+                    <option value="бессимптомное">Бессимптомное</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>

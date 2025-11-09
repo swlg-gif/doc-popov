@@ -1,0 +1,102 @@
+<!-- Examination Section -->
+<div class="card mb-4">
+    <div class="card-header">
+        <h5 class="mb-0">
+            <i class="fas fa-stethoscope"></i>
+            Объективный осмотр
+        </h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="temperature" class="form-label">Температура (°C):</label>
+                <input type="number" class="form-control" id="temperature" name="temperature" step="0.1" min="35" max="42">
+            </div>
+            <div class="col-md-3">
+                <label for="weight" class="form-label">Вес (кг):</label>
+                <input type="number" class="form-control" id="weight" name="weight" step="0.1" min="0">
+            </div>
+            <div class="col-md-3">
+                <label for="height" class="form-label">Рост (см):</label>
+                <input type="number" class="form-control" id="height" name="height" step="0.1" min="0">
+            </div>
+            <div class="col-md-3">
+                <label for="condition" class="form-label">Состояние:</label>
+                <select class="form-select" id="condition" name="condition">
+                    <option value="">-- Выберите --</option>
+                    <option value="удовлетворительное">Удовлетворительное</option>
+                    <option value="средней тяжести">Средней тяжести</option>
+                    <option value="тяжелое">Тяжелое</option>
+                    <option value="крайне тяжелое">Крайне тяжелое</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <label for="skin" class="form-label">Кожные покровы:</label>
+                <select class="form-select" id="skin" name="skin">
+                    <option value="чистые">Чистые</option>
+                    <option value="бледные">Бледные</option>
+                    <option value="цианотичные">Цианотичные</option>
+                    <option value="желтушные">Желтушные</option>
+                    <option value="сыпь">Сыпь</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="breathing" class="form-label">Дыхание:</label>
+                <select class="form-select" id="breathing" name="breathing">
+                    <option value="везикулярное">Везикулярное</option>
+                    <option value="жесткое">Жесткое</option>
+                    <option value="ослабленное">Ослабленное</option>
+                    <option value="бронхиальное">Бронхиальное</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="wheezing" class="form-label">Хрипы:</label>
+                <select class="form-select" id="wheezing" name="wheezing">
+                    <option value="нет">Нет</option>
+                    <option value="сухие">Сухие</option>
+                    <option value="влажные">Влажные</option>
+                    <option value="свистящие">Свистящие</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <label for="heart" class="form-label">Сердце:</label>
+                <select class="form-select" id="heart" name="heart">
+                    <option value="тоны ясные">Тоны ясные</option>
+                    <option value="приглушены">Приглушены</option>
+                    <option value="тахикардия">Тахикардия</option>
+                    <option value="брадикардия">Брадикардия</option>
+                    <option value="аритмия">Аритмия</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="abdomen" class="form-label">Живот:</label>
+                <select class="form-select" id="abdomen" name="abdomen">
+                    <option value="мягкий">Мягкий</option>
+                    <option value="напряжен">Напряжен</option>
+                    <option value="болезненный">Болезненный</option>
+                    <option value="вздут">Вздут</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="throat" class="form-label">Зев:</label>
+                <select class="form-select" id="throat" name="throat">
+                    <option value="чистый">Чистый</option>
+                    <option value="гиперемирован">Гиперемирован</option>
+                    <option value="отечный">Отечный</option>
+                    <option value="налеты">Налеты</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <label for="examinationNotes" class="form-label">Дополнительные заметки по осмотру:</label>
+            <textarea class="form-control" id="examinationNotes" rows="2" placeholder="Дополнительные наблюдения..."></textarea>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<!-- Diagnosis Section -->
+<div class="card mb-4">
+    <div class="card-header">
+        <h5 class="mb-0">
+            <i class="fas fa-diagnoses"></i>
+            Диагноз
+        </h5>
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label for="mainDiagnosis" class="form-label">Основной диагноз:</label>
+            <select class="form-select" id="mainDiagnosis" name="mainDiagnosis">
+                <option value="">-- Выберите диагноз --</option>
+                <option value="J06.9">J06.9 - Острая инфекция верхних дыхательных путей неуточненная</option>
+                <option value="J20.9">J20.9 - Острый бронхит неуточненный</option>
+                <option value="J18.9">J18.9 - Пневмония неуточненная</option>
+                <option value="A08.4">A08.4 - Вирусная кишечная инфекция неуточненная</option>
+                <option value="Z00.1">Z00.1 - Плановый осмотр ребенка</option>
+                <option value="Z23.2">Z23.2 - Необходимость иммунизации только против кори</option>
+                <option value="Z25.1">Z25.1 - Необходимость иммунизации против краснухи</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="mainDiagnosisText" class="form-label">Текст основного диагноза:</label>
+            <input type="text" class="form-control" id="mainDiagnosisText" name="mainDiagnosisText" 
+                   placeholder="Клинический диагноз...">
+        </div>
+
+        <div class="mb-3">
+            <label for="additionalDiagnoses" class="form-label">Дополнительные диагнозы:</label>
+            <div id="additionalDiagnosesContainer">
+                <!-- Динамически добавляемые дополнительные диагнозы -->
+            </div>
+            <button type="button" class="btn btn-sm btn-outline-primary mt-2" onclick="addAdditionalDiagnosis()">
+                <i class="fas fa-plus"></i> Добавить дополнительный диагноз
+            </button>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Степень тяжести:</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="severity" id="severityMild" value="легкая">
+                <label class="form-check-label" for="severityMild">Легкая</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="severity" id="severityModerate" value="средняя">
+                <label class="form-check-label" for="severityModerate">Средняя</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="severity" id="severitySevere" value="тяжелая">
+                <label class="form-check-label" for="severitySevere">Тяжелая</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Шаблон для дополнительного диагноза -->
+<template id="additionalDiagnosisTemplate">
+    <div class="additional-diagnosis-item mb-2">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Дополнительный диагноз">
+            <button class="btn btn-outline-danger" type="button" onclick="removeAdditionalDiagnosis(this)">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+</template>

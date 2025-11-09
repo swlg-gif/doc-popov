@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}👨‍⚕️ Кабинет доктора Попова{% endblock %}</title>
+    
+    <!-- Подключение стилей -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', path='/css/main.css') }}" rel="stylesheet">
+    
+    {% block styles %}{% endblock %}
+</head>
+<body>
+    <!-- Фон с градиентом и вотермарком -->
+    <div class="background-container">
+        <div class="watermark">Кабинет доктора Попова</div>
+        <div class="gradient-bg"></div>
+    </div>
+
+    <div class="app-container">
+        <!-- Боковое меню -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="clinic-info">
+                    <div class="clinic-logo">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <div class="clinic-text">
+                        <h3>Доктор Попов</h3>
+                        <span>Педиатрия</span>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="sidebar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        <div class="nav-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <span class="nav-text">Главная</span>
+                        <div class="nav-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/patients">
+                        <div class="nav-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <span class="nav-text">Пациенты</span>
+                        <div class="nav-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/appointments">
+                        <div class="nav-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <span class="nav-text">Расписание</span>
+                        <div class="nav-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/reports">
+                        <div class="nav-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <span class="nav-text">Отчеты</span>
+                        <div class="nav-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/settings">
+                        <div class="nav-icon">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <span class="nav-text">Настройки</span>
+                        <div class="nav-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="user-details">
+                        <span class="user-name">Доктор Попов</span>
+                        <span class="user-status">Онлайн</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    {% block scripts %}{% endblock %}
+
+    <script>
+        // Анимация элементов при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            // Анимация появления элементов
+            const animateOnLoad = () => {
+                const elements = document.querySelectorAll('.card, .btn, .stat-card, .patient-item');
+                elements.forEach((el, index) => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(20px)';
+                    el.style.transition = 'all 0.6s ease';
+                    
+                    setTimeout(() => {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }, 100 + (index * 50));
+                });
+            };
+
+            // Анимация для бокового меню
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+                
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
+                    item.style.transition = 'all 0.5s ease ' + (index * 0.1) + 's';
+                }, 300);
+            });
+
+            // Запуск анимаций
+            setTimeout(animateOnLoad, 500);
+
+            // Анимация при наведении на карточки
+            const cards = document.querySelectorAll('.card, .stat-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Анимация кнопок
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                });
+                
+                btn.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+
+        // Плавная прокрутка для якорей
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
